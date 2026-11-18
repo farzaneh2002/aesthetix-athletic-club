@@ -1,0 +1,151 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AESTHETIX ATHLETIC CLUB | Uncompromising Discipline</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#0d0e11",
+            "surface": "#121316",
+            "surface-dim": "#121316",
+            "surface-container-low": "#1b1b1f",
+            "surface-container": "#1f1f23",
+            "surface-container-high": "#292a2d",
+            "primary-container": "#ff2a3b",
+            "primary": "#ffb3af",
+            "inverse-primary": "#bf0021",
+            "on-surface": "#e3e2e6",
+            "on-surface-variant": "#e8bcb9",
+            "tertiary-container": "#8f9098"
+          },
+          fontFamily: {
+            "display-hero": ["Space Grotesk", "sans-serif"],
+            "headline-xl": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "stat-numeral": ["Space Grotesk", "sans-serif"],
+            "label-caps": ["Space Grotesk", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "headline-xl": ["44px", { lineHeight: "50px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "headline-sm": ["20px", { lineHeight: "26px", letterSpacing: "0em", fontWeight: "600" }],
+            "stat-numeral": ["36px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    @keyframes heroFadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-anim-1 { animation: heroFadeDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .hero-anim-2 { animation: heroFadeDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards; opacity: 0; }
+    .hero-anim-3 { animation: heroFadeDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
+    .hero-anim-4 { animation: heroFadeDown 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards; opacity: 0; }
+  </style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Syne:wght@700;800;900&amp;display=swap" data-snapdom="injected-import"></head>
+<body class="bg-surface-container-lowest text-on-surface antialiased selection:bg-primary-container selection:text-white min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- TOP OCCUPANCY TICKER -->
+
+<!-- FIXED NAVBAR -->
+<header class="fixed top-0 left-0 right-0 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-white/10 w-full transition-all z-50">
+<div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+<!-- Brand Logo -->
+<a href="#" class="flex items-center gap-2 group shrink-0"><span class="font-display-hero text-2xl font-bold tracking-wider text-white uppercase">AESTHETI<span class="text-primary-container">X</span></span></a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8"><a class="text-primary-container px-3 py-1 font-bold uppercase tracking-wider text-sm hover:text-white transition-colors" href="#">Home</a>
+<a class="text-on-surface/80 hover:text-white px-3 py-1 font-bold uppercase tracking-wider text-sm transition-colors" href="#classes">Classes</a>
+<a class="text-on-surface/80 hover:text-white px-3 py-1 font-bold uppercase tracking-wider text-sm transition-colors" href="#timetable">Schedule</a>
+<a class="text-on-surface/80 hover:text-white px-3 py-1 font-bold uppercase tracking-wider text-sm transition-colors" href="#nutrition">Nutrition</a></nav>
+<!-- Trailing Action -->
+<div class="flex items-center space-x-3">
+<!-- Expandable Search Field -->
+<div class="relative flex items-center">
+<input class="hidden w-52 bg-surface-container-high border border-white/20 text-xs px-3 py-1.5 text-white focus:outline-none focus:border-primary-container" id="search-input" placeholder="Search workouts, coaches..." type="text">
+<button aria-label="Search" class="p-2 text-white/80 hover:text-white transition-colors" id="search-toggle-btn">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+</div>
+<button class="bg-primary-container text-white px-5 py-2 text-label-caps uppercase tracking-wider flex items-center gap-1.5 hover:bg-inverse-primary transition-all shadow-[0_0_20px_rgba(255,42,59,0.4)]" onclick="openJoinModal()">
+<span class="">Join Now</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- HERO SECTION -->
+<section class="relative min-h-[840px] flex flex-col justify-between overflow-hidden pt-20">
+<div class="absolute inset-0 z-0 pointer-events-none">
+<img alt="Boxer silhouette in the spotlight" class="w-full h-full object-cover object-top filter brightness-75 contrast-110 absolute" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmvHniJYoV7wd42nJd0wgeG8aGF_bPHZQFc8xishFkgmifb4pVCtTNIY41GS7O523fyPJqJYeLeQU_HwjLm2-_QHYdghkkHw4wTj_hVgSIdbKKorHfSrwwwN5ErXuslIQeb0j9i-YxoBWzKDKpNtUaKrZEvaeVka2zMSRUUiWOMPKUL8X9e7GT5hgsRN_FWBm066jAGBLh8V-UYBcThI_vUgjA75oa3PSG735d5Tr1zFedkuByUKf__q0LlQ1ZP1mthQ">
+<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full my-auto py-12">
+<div class="max-w-2xl space-y-6">
+<h1 class="font-display-hero text-5xl md:text-display-hero uppercase tracking-tight text-white leading-[1.05] hero-anim-1">
+            YOUR BODY<br>
+<span class="text-primary-container drop-shadow-[0_0_25px_rgba(255,42,59,0.6)]">YOUR RULES</span><br>
+            YOUR REVOLUTION
+          </h1>
+<p class="font-body-md md:text-lg text-on-surface/90 max-w-lg leading-relaxed hero-anim-2">
+            "Join the toughest fitness community in town. Unlimited classes, expert coaches, and a tribe that pushes you beyond your limits."
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-4 hero-anim-3">
+<a class="bg-primary-container text-white px-8 py-3.5 text-label-caps uppercase tracking-wider hover:bg-inverse-primary transition-all active:scale-95 shadow-[0_0_28px_rgba(255,42,59,0.55)] inline-flex items-center gap-2" href="#classes">
+<span class="">SEE CLASSES</span>
+<span class="material-symbols-outlined text-[18px]">sports_martial_arts</span>
+</a>
+<button class="border border-primary-container text-white bg-primary-container/10 hover:bg-primary-container hover:text-white px-8 py-3.5 text-label-caps uppercase tracking-wider transition-all inline-flex items-center gap-2" onclick="triggerToast('Free 1-Day VIP Pass claimed! Present confirmation at reception.')">
+<span class="">CLAIM FREE 1-DAY PASS</span>
+<span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Stats Bar -->
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full pb-0">
+<div class="relative max-w-6xl mx-auto hero-anim-4">
+<div class="bg-primary-container shadow-[0_16px_40px_rgba(255,42,59,0.4)] py-6 px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center divide-y md:divide-y-0 md:divide-x divide-white/25 border-y border-white/20" style="clip-path: polygon(24px 0, 100% 0, calc(100% - 24px) 100%, 0 100%);">
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="font-stat-numeral text-3xl md:text-stat-numeral font-bold tracking-tight text-white">500+</span>
+<span class="font-label-caps text-xs uppercase tracking-wider text-white/90">Active Members</span>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="font-stat-numeral text-3xl md:text-stat-numeral font-bold tracking-tight text-white">98%</span>
+<span class="font-label-caps text-xs uppercase tracking-wider text-white/90">Goal Success Rate</span>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="font-stat-numeral text-3xl md:text-stat-numeral font-bold tracking-tight text-white">18+</span>
+<span class="font-label-caps text-xs uppercase tracking-wider text-white/90">Elite Master Coaches</span>
+</div>
+<div class="flex flex-col items-center justify-center space-y-1">
+<span class="font-stat-numeral text-3xl md:text-stat-numeral font-bold tracking-tight text-white">24/7</span>
+<span class="font-label-caps text-xs uppercase tracking-wider text-white/90">Biometric Access</span>
+</div>
+</div>
+</div>
+</div>
+</section>

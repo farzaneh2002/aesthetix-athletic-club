@@ -34,10 +34,16 @@ The design leans into a high-contrast dark aesthetic: pitch blacks, sharp crimso
 
 ## Project Structure
 aesthetix-athletic-club/
-├── index.html # Homepage markup
+├── index.html
+├── pages/
+│   ├── classes.html
+│   ├── schedule.html
+│   ├── trainers.html
+│   └── nutrition.html
 ├── css/
-│ └── style.css # Custom styles, animations, overrides
+│   ├── style.css
+│   └── pages/
 ├── js/
-│ └── main.js # All interactive behavior
-├── DESIGN.md # Design system reference (colors, type, spacing)
-└── README.md
+│   ├── main.js
+│   └── pages/
+└── ...
