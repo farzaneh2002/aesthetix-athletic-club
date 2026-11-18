@@ -33,3 +33,11 @@ The design leans into a high-contrast dark aesthetic: pitch blacks, sharp crimso
 - **Material Symbols** — icon set
 
 ## Project Structure
+aesthetix-athletic-club/
+├── index.html # Homepage markup
+├── css/
+│ └── style.css # Custom styles, animations, overrides
+├── js/
+│ └── main.js # All interactive behavior
+├── DESIGN.md # Design system reference (colors, type, spacing)
+└── README.md
